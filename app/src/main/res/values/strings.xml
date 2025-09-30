@@ -21,4 +21,9 @@
     <string name="don_t_have_an_account_signup">Don\'t have an account ? SignUp</string>
     <string name="login">Login</string>
     <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="add_new_expense">Add New Expense</string>
+    <string name="item_name">Item Name</string>
+    <string name="amount">Amount</string>
+    <string name="select_date">Select Date</string>
 </resources>
