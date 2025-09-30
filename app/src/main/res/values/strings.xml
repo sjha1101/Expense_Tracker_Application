@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Login_registration</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="login_form">Login Form</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="select_your_gender">Select your gender</string>
+    <string name="reading">Reading</string>
+    <string name="sports">Sports</string>
+    <string name="dancing">Dancing</string>
+    <string name="traveling">Traveling</string>
+    <string name="select_your_hobby">Select your hobby</string>
+    <string name="submit">Submit</string>
+    <string name="registration_form">Registration form</string>
+    <string name="enter_confirm_password">Enter confirm password</string>
+    <string name="fruits">Fruits</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="electronics">Electronics</string>
+    <string name="Sports">Sports</string>
+    <string name="don_t_have_an_account_signup">Don\'t have an account ? SignUp</string>
+    <string name="login">Login</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+</resources>
