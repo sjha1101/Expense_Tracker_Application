@@ -26,10 +26,7 @@ class RegisterActivity : AppCompatActivity() {
         val female: RadioButton = findViewById(R.id.female)
         val submitBtn: Button = findViewById(R.id.submit)
         val login:TextView = findViewById(R.id.login)
-        val DataDatabase:SQLiteDatabase = openOrCreateDatabase("Data",MODE_PRIVATE,null)
-        val sportsCheckbox: CheckBox = findViewById(R.id.sports)
-        val dancingCheckbox: CheckBox = findViewById(R.id.dancing)
-        val travelingCheckbox: CheckBox = findViewById(R.id.traveling)
+        val DataDatabase:SQLiteDatabase = openOrCreateDatabase("ExpenseManage",MODE_PRIVATE,null)
 
          submitBtn.setOnClickListener {
             val emailInput = email.text.toString().trim()
@@ -40,10 +37,6 @@ class RegisterActivity : AppCompatActivity() {
                 female.isChecked -> "Female"
                 else -> ""
             }
-             val selectedHobbies = mutableListOf<String>()
-             if (sportsCheckbox.isChecked) selectedHobbies.add("Sports")
-             if (dancingCheckbox.isChecked) selectedHobbies.add("Dancing")
-             if (travelingCheckbox.isChecked) selectedHobbies.add("Traveling")
 
             if(emailInput.isEmpty()){
                 Toast.makeText(this, "Enter your email", Toast.LENGTH_SHORT).show()
@@ -67,15 +60,12 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please select a gender.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-             val hobbies = selectedHobbies.joinToString(",")
 
-             // Create table if not exists with an added hobbies column
-             DataDatabase.execSQL("CREATE TABLE IF NOT EXISTS USER(email VARCHAR, password VARCHAR, gender VARCHAR, hobbies VARCHAR)")
+             DataDatabase.execSQL("CREATE TABLE IF NOT EXISTS USER(email VARCHAR, password VARCHAR, gender VARCHAR)")
 
-             // Insert user data into the table including hobbies
              DataDatabase.execSQL(
-                 "INSERT INTO USER(email, password, gender, hobbies) VALUES(?, ?, ?, ?)",
-                 arrayOf(emailInput, passwordInput, gender, hobbies)
+                 "INSERT INTO USER(email, password, gender) VALUES(?, ?, ?)",
+                 arrayOf(emailInput, passwordInput, gender)
              )
 
              Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()

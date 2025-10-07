@@ -26,4 +26,6 @@
     <string name="item_name">Item Name</string>
     <string name="amount">Amount</string>
     <string name="select_date">Select Date</string>
+    <string name="view_history">View History</string>
+    <string name="expense_history">Expense History</string>
 </resources>

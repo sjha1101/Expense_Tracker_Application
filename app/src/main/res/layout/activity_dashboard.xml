@@ -37,7 +37,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Item Name -->
         <EditText
             android:id="@+id/item_name"
             android:layout_width="match_parent"
@@ -50,7 +49,6 @@
             android:textSize="16sp"
             android:layout_marginBottom="12dp"/>
 
-        <!-- Amount -->
         <EditText
             android:id="@+id/amount"
             android:layout_width="match_parent"
@@ -65,7 +63,7 @@
             android:layout_marginBottom="12dp"/>
 
         <EditText
-            android:id="@+id/date_field"
+            android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/select_date"
@@ -76,28 +74,24 @@
             android:textColorHint="@color/gray_light"
             android:padding="12dp"
             android:textSize="16sp"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp" />
 
-        <!-- Add Expense Button -->
         <Button
             android:id="@+id/addBtn"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/add_expense"
-            android:layout_marginBottom="12dp"
             android:textColor="@color/black"
             android:backgroundTint="@color/white"
             android:textSize="20sp"
-            android:layout_marginTop="20dp"
             android:padding="10dp"
             android:elevation="2dp" />
 
-        <!-- View History -->
         <TextView
             android:id="@+id/view_history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="View History"
+            android:text="@string/view_history"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:layout_gravity="center"
